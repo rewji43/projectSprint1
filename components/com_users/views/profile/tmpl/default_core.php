@@ -28,22 +28,12 @@ defined('_JEXEC') or die;
 			<?php echo $this->escape($this->data->username); ?>
 		</dd>
 		<dt>
-			<?php echo JText::_('COM_USERS_PROFILE_REGISTERED_DATE_LABEL'); ?>
+    		<?php echo JText::_('COM_USERS_PROFILE_EMAIL1_LABEL'); ?> 
 		</dt>
 		<dd>
-			<?php echo JHtml::_('date', $this->data->registerDate, JText::_('DATE_FORMAT_LC1')); ?>
+    		<?php $user = JFactory::getUser();
+          		echo $user->email; ?>
 		</dd>
-		<dt>
-			<?php echo JText::_('COM_USERS_PROFILE_LAST_VISITED_DATE_LABEL'); ?>
-		</dt>
-		<?php if ($this->data->lastvisitDate != $this->db->getNullDate()) : ?>
-			<dd>
-				<?php echo JHtml::_('date', $this->data->lastvisitDate, JText::_('DATE_FORMAT_LC1')); ?>
-			</dd>
-		<?php else : ?>
-			<dd>
-				<?php echo JText::_('COM_USERS_PROFILE_NEVER_VISITED'); ?>
-			</dd>
-		<?php endif; ?>
+
 	</dl>
 </fieldset>
