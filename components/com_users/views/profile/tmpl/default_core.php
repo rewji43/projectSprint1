@@ -34,6 +34,5 @@ defined('_JEXEC') or die;
     		<?php $user = JFactory::getUser();
           		echo $user->email; ?>
 		</dd>
-
 	</dl>
 </fieldset>
