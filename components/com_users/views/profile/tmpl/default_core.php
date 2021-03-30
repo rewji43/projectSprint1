@@ -25,7 +25,13 @@ defined('_JEXEC') or die;
 					<?php echo JText::_('COM_USERS_PROFILE_NAME_LABEL'); ?>
 				</dt>
 				<dd>
-					<?php echo $this->escape($this->data->name); ?>
+					<?php
+					if ($lang->getName() == "Thai (th-TH)"){
+						echo "นางไพรวัลย์ คุณาสถิตย์ชัย";
+					} else{
+						echo 'Mrs.'.$this->escape($this->data->name);	
+					} 
+					?>
 				</dd>
 				<dt>
 					<?php echo JText::_('COM_USERS_PROFILE_USERNAME_LABEL'); ?>
